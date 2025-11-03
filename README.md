@@ -4,7 +4,7 @@ Projects demonstrating secure, highly available AWS networking architectures, in
 ## Tech Stack
 
 **EC2**
-* Create and use NAT EC2 instance instead of NAT Gateway
+* Create and use NAT EC2 instance instead of a NAT Gateway for network traffic management
 
 **VPC**
 * Create VPC Peering between VPCs across AWS regions and connect to EC2 instance over private IP by using VPC peering connection
