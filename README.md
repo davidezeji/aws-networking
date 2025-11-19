@@ -21,7 +21,7 @@ Projects demonstrating secure, highly available AWS networking architectures, in
 * Implement AWS region level failover using AWS Route53
 
 **S3**
-* Hosting website on S3 using custom domain name from GoDaddy
+* Hosting a website on S3 using custom domain name from GoDaddy
 
 * Hosting HTTPS enabled website using S3 and CloudFront
 

@@ -1,11 +1,10 @@
 # Route53 DNS Region Level Failover
 
-## Steps
 **Prerequisites:**
 * Replicate the same AWS environment in two different regions (similar VPC, subnet, IGW and ec2 instance)
 * Create a public doamin name (ex: via GoDaddy.com)
 * Ensure that your DNS is pointing to it as an AWS ROUTE53 public hosted zone.
-
+## Steps
 1. Launch an ec2 instance and assign a public IP to it. Allow SSH and HTTP in its security group.
 2. Install a httpd web server on the instance
 ![alt text](photos/httpd.png)
