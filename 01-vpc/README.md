@@ -72,15 +72,19 @@
 ***prerequiste:*** Make sure to enable Private DNS for the VPC (DNS hostnames & DNS resolution)
 ## Architecture
 ![alt text](photos-3b/architecture.png)
+## Steps
 1. Enable Private DNS for your VPC endpoint service 
+![alt text](photos-3b/endpoint1.png)
 2. Verify the domain ownership
+![alt text](photos-3b/endpoint1.png)
+![alt text](photos-3b/endpoint2.png)
+    - steps to verify domain ownership:
+    ![alt text](photos-3b/endpoint3.png)
+    ![alt text](photos-3b/endpoint4.png)
 3. Enable Private DNS for the VPC endpoint
+![alt text](photos-3b/endpoint5.png)
 4. From EC2-B, access the service using Private DNS
+![alt text](photos-3b/instance1.png)
+![alt text](photos-3b/instance2.png)
 
-# Part 4: Advanced Networking: Setup Site-To-Site VPN between AWS VPC and simulated on-premise network
 
-## Steps
-
-# Part 5: Advanced Networking: Setup Site-To-Site VPN between AWS VPC and simulated on-premise network
-
-## Steps

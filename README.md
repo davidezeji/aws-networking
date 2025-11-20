@@ -9,11 +9,11 @@ Projects demonstrating secure, highly available AWS networking architectures, in
 
 * Create and use VPC Private Link to expose your Web service privately to application hosted in another VPC
 
-* Advanced Networking: Setup Site-To-Site VPN between AWS VPC and simulated on-premise network
-
 * Transit Gateway - Setup communication between multiple VPCs
 
 **VPN**
+* Setup Site-To-Site VPN between AWS VPC and simulated on-premise network
+
 * AWS Client VPN and various scenarios like accessing Internet, Split Tunnel, accessing Peered VPCs via Client VPN connection
 
 **S3**
