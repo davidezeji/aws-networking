@@ -19,8 +19,8 @@
     - In the route table for VPC-B we show that if the traffic is coming from VPC-A (desination: 10.100.0.0/16) the target should be the VPC peering connection we created.
     ![alt text](photos-1/peering4.png)
     ![alt text](photos-1/peering5.png)
-- Do the same for the route table in VPC-A
-![alt text](photos-1/peering6.png)
+    - Do the same for the route table in VPC-A
+    ![alt text](photos-1/peering6.png)
 7. Now if you trying pinging EC2-C via EC2-B you should get a response
 ![alt text](photos-1/peering7.png)
 
@@ -38,9 +38,9 @@
 4. Create an IAM role for the EC2 instance and attach the S3 read-only IAM policy. Associate the role with EC2-B.
 ![alt text](photos-2/iam1.png)
 ![alt text](photos-2/iam2.png)
-- After creating the role, modify the IAM role of EC2-B to use your newly created one.
-![alt text](photos-2/instance1.png)
-![alt text](photos-2/instance2.png)
+    - After creating the role, modify the IAM role of EC2-B to use your newly created one.
+    ![alt text](photos-2/instance1.png)
+    ![alt text](photos-2/instance2.png)
 5. Login to EC2-B and try to download the sample file stored in your S3 bucket via the AWS CLI. It should not work.
 ![alt text](photos-2/instance3.png)
 6. Create a VPC endpoint (type: gateway) for S3 and update the Private subnet route table.
