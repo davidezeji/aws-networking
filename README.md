@@ -2,10 +2,6 @@
 Projects demonstrating secure, highly available AWS networking architectures, integrating private connectivity, inter-VPC communication, and scalable routing solutions to support enterprise workloads and multi-account environments.
 
 ## Tech Stack
-
-**EC2**
-* Create and use NAT EC2 instance instead of a NAT Gateway for network traffic management
-
 **VPC**
 * Create VPC Peering between VPCs across AWS regions and connect to EC2 instance over private IP by using VPC peering connection
 
@@ -17,13 +13,21 @@ Projects demonstrating secure, highly available AWS networking architectures, in
 
 * Transit Gateway - Setup communication between multiple VPCs
 
-**Route53**
-* Implement AWS region level failover using AWS Route53
+**VPN**
+* AWS Client VPN and various scenarios like accessing Internet, Split Tunnel, accessing Peered VPCs via Client VPN connection
 
 **S3**
 * Hosting a website on S3 using custom domain name from GoDaddy
 
 * Hosting HTTPS enabled website using S3 and CloudFront
 
-**VPN**
-* AWS Client VPN and various scenarios like accessing Internet, Split Tunnel, accessing Peered VPCs via Client VPN connection
+**Route53**
+* Implement AWS region level failover using AWS Route53
+
+**EC2**
+* Create and use NAT EC2 instance instead of a NAT Gateway for network traffic management
+
+
+
+
+
