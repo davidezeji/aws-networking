@@ -48,24 +48,35 @@
 ![alt text](photos-2/endpoint2.png)
 7. Try to download the same file from S3 again. It should now work.
 ![alt text](photos-2/instance4.png)
-# Part 3: Create and use VPC Private Link to expose your Web service privately to application hosted in another VPC
+# Part 3A: Create and use VPC Private Link to expose your Web service privately to an application hosted in another VPC
 ## Architecture
-![alt text](photos-3/architecture.png)
+![alt text](photos-3a/architecture.png)
 ## Steps
 ***prerequiste:*** Make sure to enable Private DNS for the VPC (DNS hostnames & DNS resolution)
 1. Create an SQS queue in the same region
-![alt text](photos-3/sqs1.png)
+![alt text](photos-3a/sqs1.png)
 2. Create an IAM role for an EC2 instance and attach the SQS read-only IAM policy to it. Associate the role with the EC2-B instance
-![alt text](photos-3/sqs2.png)
+![alt text](photos-3a/sqs2.png)
 3. Login to the EC2-B instance and try to send a message to the SQS queue using the AWS CLI. It should not work.
-![alt text](photos-3/instance1.png)
+![alt text](photos-3a/instance1.png)
 4. Create a VPC interface endpoint for SQS in the private subnet. For your Security group allow an inbound rule of https/443 (allow the source IP to be the entire CIDR for your VPC).
-![alt text](photos-3/sg1.png)
-![alt text](photos-3/endpoint1.png)
+![alt text](photos-3a/sg1.png)
+![alt text](photos-3a/endpoint1.png)
 5. Try to send the message to your SQS queue again. It should work this time. 
-![alt text](photos-3/instance2.png)
-![alt text](photos-3/sqs3.png)
-![alt text](photos-3/sqs4.png)
+![alt text](photos-3a/instance2.png)
+![alt text](photos-3a/sqs3.png)
+![alt text](photos-3a/sqs4.png)
+
+# Part 3B: Use VPC PrivateLink to Access a SaaS Application Using Private DNS
+## Steps
+***prerequiste:*** Make sure to enable Private DNS for the VPC (DNS hostnames & DNS resolution)
+## Architecture
+![alt text](photos-3b/architecture.png)
+1. Enable Private DNS for your VPC endpoint service 
+2. Verify the domain ownership
+3. Enable Private DNS for the VPC endpoint
+4. From EC2-B, access the service using Private DNS
+
 # Part 4: Advanced Networking: Setup Site-To-Site VPN between AWS VPC and simulated on-premise network
 
 ## Steps
